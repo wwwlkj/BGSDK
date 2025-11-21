@@ -1,6 +1,6 @@
 module github.com/wwwlkj/bgsdk
 
-go 1.24.7
+go 1.23.3
 
 require (
 	github.com/bytedance/douyin-openapi-credential-go v0.0.0-20240627133153-7f4587ca06ce
