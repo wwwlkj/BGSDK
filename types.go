@@ -73,16 +73,32 @@ type ChatMessage struct {
 }
 
 // GiftMessage 礼物消息
+//
+//	type GiftMessage struct {
+//		MsgId     string `json:"msg_id"`
+//		SecOpenid string `json:"sec_openid"`
+//		SecGiftId string `json:"sec_gift_id"`
+//		GiftNum   int64  `json:"gift_num"`
+//		GiftValue int64  `json:"gift_value"`
+//		AvatarUrl string `json:"avatar_url"`
+//		Nickname  string `json:"nickname"`
+//		Timestamp int64  `json:"timestamp"`
+//		Test      bool   `json:"test"`
+//	}
+//
+// GiftMessage 礼物消息
 type GiftMessage struct {
-	MsgId     string `json:"msg_id"`
-	SecOpenid string `json:"sec_openid"`
-	SecGiftId string `json:"sec_gift_id"`
-	GiftNum   int64  `json:"gift_num"`
-	GiftValue int64  `json:"gift_value"`
-	AvatarUrl string `json:"avatar_url"`
-	Nickname  string `json:"nickname"`
-	Timestamp int64  `json:"timestamp"`
-	Test      bool   `json:"test"`
+	MsgId             string `json:"msg_id"`
+	SecOpenid         string `json:"sec_openid"`
+	SecGiftId         string `json:"sec_gift_id"`
+	GiftNum           int    `json:"gift_num"`
+	GiftValue         int    `json:"gift_value"`
+	AvatarUrl         string `json:"avatar_url"`
+	Nickname          string `json:"nickname"`
+	Timestamp         int    `json:"timestamp"`
+	Test              bool   `json:"test"`
+	AudienceSecOpenId string `json:"audience_sec_open_id"`
+	SecMagicGiftId    string `json:"sec_magic_gift_id"` // 加密的幸运魔方礼物id（有该字段，代表的是由幸运魔方抽取到的礼物。sec_gift_id是幸运魔方抽取到的礼物）
 }
 
 // LikeMessage 点赞消息
